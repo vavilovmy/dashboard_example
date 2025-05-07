@@ -1,0 +1,44 @@
+@mixin button {
+   width: 40px;
+   height: 40px;
+   padding: 0;
+   border: none;
+   background: #fff;
+   border-radius: 50%;
+   cursor: pointer;
+   position: relative;
+   
+   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@mixin triangle {
+   content: '';
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   
+   width: 0;
+   height: 0;
+   margin: -10px 0 0 -2px;
+   border-style: solid;
+   border-width: 10px 0 10px 8px;
+   border-color: transparent transparent transparent rgba(152, 159, 163, 1);
+}
+
+.nextButton {
+   @include button();
+   &:before {
+      @include triangle();
+      
+   }
+   margin-left: 8px;
+}
+
+.prevButton {
+   @include button();
+   &:before {
+      @include triangle();
+      transform: rotate(180deg);
+      margin: -10px 0 0 -6px;
+   }
+}

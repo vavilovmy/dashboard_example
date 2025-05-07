@@ -1,0 +1,44 @@
+.sideWrapper {
+  height: 1376px;
+  width: 267px;
+  border-radius: 56px;
+  background: linear-gradient(to bottom, rgb(84, 211, 194), rgb(48, 137, 138));
+}
+.sideWrapper nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 64px;
+}
+.sideWrapper nav .logo {
+  margin-top: 55px;
+  margin-bottom: 74px;
+  margin-left: 32px;
+}
+.sideWrapper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-left: 29px;
+}
+.sideWrapper ul .active {
+  background-color: rgba(169, 233, 224, 0.75);
+}
+.sideWrapper ul li {
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sideWrapper ul li:hover {
+  background-color: rgba(169, 233, 224, 0.75);
+  cursor: pointer;
+}/*# sourceMappingURL=Sidebar.module.css.map */

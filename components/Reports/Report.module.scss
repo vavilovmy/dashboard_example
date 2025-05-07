@@ -1,0 +1,20 @@
+.reportBlock {
+   width: 264px;
+   height: 168px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   background-color: rgba(84, 211, 194, 1);
+   border-radius: 24px;
+}
+
+.stats {
+   width: 144px;
+   height: 36px;
+   background-color: rgba(248, 248, 248, 0.25);
+   border-radius: 24px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}

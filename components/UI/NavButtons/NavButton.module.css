@@ -1,0 +1,50 @@
+.nextButton {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 8px;
+}
+.nextButton:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: -10px 0 0 -2px;
+  border-style: solid;
+  border-width: 10px 0 10px 8px;
+  border-color: transparent transparent transparent rgb(152, 159, 163);
+}
+
+.prevButton {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.prevButton:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin: -10px 0 0 -2px;
+  border-style: solid;
+  border-width: 10px 0 10px 8px;
+  border-color: transparent transparent transparent rgb(152, 159, 163);
+  transform: rotate(180deg);
+  margin: -10px 0 0 -6px;
+}/*# sourceMappingURL=NavButton.module.css.map */
