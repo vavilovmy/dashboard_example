@@ -2,7 +2,6 @@
    display: flex;
    height: 154px;
    width: 1324px;
-   background-color: yellow;
    margin: 0 auto;
    
 }
@@ -10,7 +9,6 @@
 .reports {
    width: 883px;
    height: 40px;
-   background-color: red;
    margin-top: 57px;
    display: flex;
 }
@@ -23,6 +21,7 @@
    height: 56px;
    margin-top: 49px;
    margin-left: 80px;
+   gap: 23px;
 }
 
 .reportsBlock {
@@ -32,4 +31,57 @@
    display: flex;
    justify-content: space-between;
    margin-left: 40px;
+   gap: 40px;
+   overflow: hidden;
+   text-wrap: nowrap;
+   
+}
+
+.arrow {
+   margin-left: auto;
+}
+
+.employee {
+   font-size: 16px;
+   line-height: 24px;
+   font-weight: 700;
+   letter-spacing: 0.44px;
+}
+
+.employeeRole {
+   font-size: 14px;
+   line-height: 20px;
+   letter-spacing: 0.15px;
+   color: rgba(152, 159, 163, 1);
+}
+
+.navItem {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 24px;
+   letter-spacing: 0.44px;
+   vertical-align: center;
+   transition: all 0.2s ease-in-out;
+   color: rgba(210, 209, 209, 1);
+   cursor: pointer;
+   transition: all 0.4s ease-in-out;
+   
+   
+   &:hover {
+      color: rgba(50, 63, 71, 1);
+      border-bottom: 4.5px solid rgba(84, 211, 194, 1);
+   }
+   
+   &_active {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.44px;
+      vertical-align: center;
+      transition: all 0.2s ease-in-out;
+      color: rgba(50, 63, 71, 1);
+      border-bottom: 4.5px solid rgba(84, 211, 194, 1);
+      cursor: pointer;
+      transition: all 0.4s ease-in-out;
+   }
 }

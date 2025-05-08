@@ -4,22 +4,29 @@ import styles from './Graph.module.css'
 const Graph = () => {
   return (
     <div className={styles.graphWrapper}>
-      
+      <Heading />
+      <Chart />
+      <Totals />
     </div>
   )
 }
 
 const Heading = () => {
   return (
-    <div>
-
+    <div className={styles.graphHeading}>
+      <h2>Общая статистика</h2>
+      <div className={styles.graphNav}>
+        <p className={styles.graphNavItem}>Неделя</p>
+        <p className={styles.graphNavItem}>Месяц</p>
+        <p className={styles.graphNavItem_active}>Год</p>
+      </div>
     </div>
   )
 }
 
-const Lines = () => {
+const Chart = () => {
   return (
-    <div>
+    <div className={styles.chart}>
 
     </div>
   )
@@ -35,8 +42,44 @@ const Months = () => {
 
 const Totals = () => {
   return (
-    <div>
-      
+    <div className={styles.totals}>
+      <ul>
+        <li>
+          <div className={styles.circle}>!</div>
+          <div>
+            <p className={styles.stat}>Выручка</p>
+            <p className={styles.amount}>₽ 8 615 253</p>
+          </div>
+        </li>
+        <li>
+          <div className={styles.circle}/>
+          <div>
+            <p className={styles.stat}>Затраты</p>
+            <p className={styles.amount}>₽ 8 615 253</p>
+          </div>
+        </li>
+        <li>
+          <div className={styles.circle}/>
+          <div>
+            <p className={styles.stat}>Прибыль</p>
+            <p className={styles.amount}>₽ 8 615 253</p>
+          </div>
+        </li>
+        <li>
+          <div className={styles.circle}/>
+          <div>
+            <p className={styles.stat}>Задолженность</p>
+            <p className={styles.amount}>₽ 8 615 253</p>
+          </div>
+        </li>
+        <li>
+          <div className={styles.circle}/>
+          <div>
+            <p className={styles.stat}>Итог</p>
+            <p className={styles.amount}>₽ 8 615 253</p>
+          </div>
+        </li>
+      </ul>
     </div>
   )
 }

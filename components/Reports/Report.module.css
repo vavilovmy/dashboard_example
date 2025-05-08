@@ -3,18 +3,70 @@
   height: 168px;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
-  background-color: rgb(84, 211, 194);
+  background-color: rgb(255, 255, 255);
   border-radius: 24px;
+  cursor: pointer;
 }
 
 .stats {
   width: 144px;
   height: 36px;
-  background-color: rgba(248, 248, 248, 0.25);
+  background-color: rgba(84, 211, 194, 0.15);
   border-radius: 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 6px;
+  margin-top: 32px;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 44px;
+  letter-spacing: -0.56px;
+  color: rgb(84, 211, 194);
+}
+
+.money {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 44px;
+  letter-spacing: -0.56px;
+  text-align: center;
+  color: rgb(50, 63, 71);
+  white-space: pre-wrap;
+  margin-bottom: 0;
+}
+
+.totals {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 44px;
+  letter-spacing: -0.56px;
+  color: rgb(50, 63, 71);
+  margin-top: -14px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 39px;
+  margin-left: 39px;
+}
+
+.positiveBox {
+  background-color: rgb(84, 211, 194);
+}
+
+.negativeBox {
+  background-color: rgb(252, 92, 101);
+}
+
+.positiveStats {
+  background-color: rgba(84, 211, 194, 0.15);
+  color: rgb(84, 211, 194);
+}
+
+.negativeStats {
+  background-color: rgba(252, 92, 101, 0.15);
+  color: rgb(252, 92, 101);
 }/*# sourceMappingURL=Report.module.css.map */

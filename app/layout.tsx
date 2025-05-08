@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import localFont from 'next/font/local'
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const myFont = localFont({
+  src: [
+    { path: '../public/fonts/ProximaNova-Semibold.ttf', weight: '600', style: 'normal' },
+    { path: '../public/fonts/ProximaNova-Bold.ttf', weight: '700', style: 'normal' },
+    { path: '../public/fonts/ProximaNova-Extrabld.ttf', weight: '800', style: 'normal' },
+    { path: '../public/fonts/ProximaNova-Black.ttf', weight: '900', style: 'normal' },
+  ],
+  variable: '--font-proximanova',   // создаст CSS‑переменную для удобного использования
+  display: 'swap',         // стратегия отображения (swap/fallback/auto)
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const montSerrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ['cyrillic', 'latin']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${montSerrat.variable} ${myFont.variable}`}>
         {children}
       </body>
     </html>

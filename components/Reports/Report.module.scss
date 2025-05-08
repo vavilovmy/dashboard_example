@@ -3,18 +3,71 @@
    height: 168px;
    display: flex;
    align-items: center;
-   justify-content: center;
    flex-direction: column;
-   background-color: rgba(84, 211, 194, 1);
+   background-color: rgba(255, 255, 255, 1);
    border-radius: 24px;
+   cursor: pointer;
 }
 
 .stats {
    width: 144px;
    height: 36px;
-   background-color: rgba(248, 248, 248, 0.25);
+   background-color: rgba(84, 211, 194, 0.15);
    border-radius: 24px;
    display: flex;
    align-items: center;
    justify-content: center;
+   padding-top: 6px;
+   margin-top: 32px;
+   margin-bottom: 13px;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 44px;
+   letter-spacing: -0.56px;
+   color: rgba(84, 211, 194, 1);
+}
+
+.money {
+   font-weight: 600;
+   font-size: 28px;
+   line-height: 44px;
+   letter-spacing: -0.56px;
+   text-align: center;
+   color: rgba(50, 63, 71, 1);
+   white-space: pre-wrap;
+
+   margin-bottom: 0;
+}
+
+.totals {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 44px;
+   letter-spacing: -0.56px;
+   color: rgba(50, 63, 71, 1);
+   margin-top: -14px;
+}
+
+.wrapper {
+   display: flex;
+   gap: 39px;
+   margin-left: 39px;
+}
+
+.positiveBox {
+   background-color: rgba(84, 211, 194, 1);
+}
+
+.negativeBox {
+   background-color: rgba(252, 92, 101, 1);
+}
+
+.positiveStats {
+   background-color: rgba(84, 211, 194, 0.15);
+   color: rgba(84, 211, 194, 1);
+}
+
+.negativeStats {
+   background-color: rgba(252, 92, 101, 0.15);
+   color: rgba(252, 92, 101, 1);;
 }

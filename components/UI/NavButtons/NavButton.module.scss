@@ -28,10 +28,14 @@
 .nextButton {
    @include button();
    &:before {
-      @include triangle();
-      
+      @include triangle();  
    }
    margin-left: 8px;
+   &:disabled {
+      &:before {
+         border-color: transparent transparent transparent rgba(210, 209, 209, 1)
+      }
+   }
 }
 
 .prevButton {
@@ -40,5 +44,10 @@
       @include triangle();
       transform: rotate(180deg);
       margin: -10px 0 0 -6px;
+   }
+   &:disabled {
+      &:before {
+         border-color: transparent transparent transparent rgba(210, 209, 209, 1)
+      }
    }
 }

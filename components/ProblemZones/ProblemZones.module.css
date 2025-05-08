@@ -9,7 +9,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .wrapper h2 {
   margin-bottom: 11px;
@@ -27,8 +28,37 @@
   gap: 18px;
 }
 .wrapper ul li {
-  display: block;
-  width: 160px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 350px;
   height: 36px;
-  background-color: red;
+}
+.wrapper .circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 15px;
+  background-color: rgb(115, 207, 122);
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 900;
+  color: white;
+  font-size: 20px;
+}
+.wrapper .operationType {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.56px;
+  color: rgb(109, 121, 134);
+  margin-bottom: 2px;
+}
+.wrapper .amount {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0%;
 }/*# sourceMappingURL=ProblemZones.module.css.map */

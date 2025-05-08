@@ -6,7 +6,7 @@ body {
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-proximanova), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,6 +15,7 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: rgba(50, 63, 71, 1);
 }
 
 a {

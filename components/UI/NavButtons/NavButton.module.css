@@ -22,6 +22,9 @@
   border-width: 10px 0 10px 8px;
   border-color: transparent transparent transparent rgb(152, 159, 163);
 }
+.nextButton:disabled:before {
+  border-color: transparent transparent transparent rgb(210, 209, 209);
+}
 
 .prevButton {
   width: 40px;
@@ -47,4 +50,7 @@
   border-color: transparent transparent transparent rgb(152, 159, 163);
   transform: rotate(180deg);
   margin: -10px 0 0 -6px;
+}
+.prevButton:disabled:before {
+  border-color: transparent transparent transparent rgb(210, 209, 209);
 }/*# sourceMappingURL=NavButton.module.css.map */
