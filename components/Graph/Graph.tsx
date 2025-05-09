@@ -1,11 +1,12 @@
 import React from 'react'
 import styles from './Graph.module.css'
+import Chart from '../LineChart/Chart'
 
 const Graph = () => {
   return (
     <div className={styles.graphWrapper}>
       <Heading />
-      <Chart />
+      <ChartContainer />
       <Totals />
     </div>
   )
@@ -24,18 +25,10 @@ const Heading = () => {
   )
 }
 
-const Chart = () => {
+const ChartContainer = () => {
   return (
     <div className={styles.chart}>
-
-    </div>
-  )
-}
-
-const Months = () => {
-  return (
-    <div>
-      
+      <Chart />
     </div>
   )
 }
@@ -45,35 +38,49 @@ const Totals = () => {
     <div className={styles.totals}>
       <ul>
         <li>
-          <div className={styles.circle}>!</div>
+          <div 
+            className={styles.circle} 
+            style={{backgroundColor: "rgba(115, 207, 122, 1)"}}>!</div>
           <div>
             <p className={styles.stat}>Выручка</p>
             <p className={styles.amount}>₽ 8 615 253</p>
           </div>
         </li>
         <li>
-          <div className={styles.circle}/>
+          <div 
+            className={styles.circle}
+            style={{backgroundColor: "rgba(48, 199, 220, 1)"}}
+          ></div>
           <div>
             <p className={styles.stat}>Затраты</p>
             <p className={styles.amount}>₽ 8 615 253</p>
           </div>
         </li>
         <li>
-          <div className={styles.circle}/>
+          <div 
+            className={styles.circle}
+            style={{backgroundColor: "rgba(69, 170, 242, 1)"}}
+          ></div>
           <div>
             <p className={styles.stat}>Прибыль</p>
             <p className={styles.amount}>₽ 8 615 253</p>
           </div>
         </li>
         <li>
-          <div className={styles.circle}/>
+          <div 
+            className={styles.circle}
+            style={{backgroundColor: "rgba(245, 226, 48, 1)"}}
+          ></div>
           <div>
             <p className={styles.stat}>Задолженность</p>
             <p className={styles.amount}>₽ 8 615 253</p>
           </div>
         </li>
         <li>
-          <div className={styles.circle}/>
+          <div 
+            className={styles.circle}
+            style={{backgroundColor: "rgba(172, 116, 252, 1)"}}
+          ></div>
           <div>
             <p className={styles.stat}>Итог</p>
             <p className={styles.amount}>₽ 8 615 253</p>

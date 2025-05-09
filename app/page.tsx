@@ -6,12 +6,6 @@ import Graph from "@/components/Graph/Graph";
 import ProblemZones from "@/components/ProblemZones/ProblemZones";
 import financeMap from "@/lib/financialMap";
 
-const totalsMap = {
-
-}
-
-
-
 export default function Home() {
 
   return (

@@ -62,11 +62,9 @@ const financeMap = {
 
 export default function Home() {
 
-   console.log(financeMap)
-
   return (
     <div className={styles.container} style={{flexDirection: 'column'}}>
-      <h1>Niggers</h1>
+      <h1>123321</h1>
       <ul>
          {dummy.map((item, index) =>
          <li key={index}>{item.division} {item.amount} {item.type} {normalizeDate(item.date).toLocaleDateString()}</li>
