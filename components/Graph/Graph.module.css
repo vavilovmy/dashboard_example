@@ -71,7 +71,7 @@
   align-items: center;
 }
 .totals ul li .stat {
-  color: rgb(210, 209, 209);
+  color: rgb(109, 121, 134);
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.56px;
@@ -88,7 +88,7 @@
   height: 28px;
   border-radius: 15px;
   background-color: rgb(115, 207, 122);
-  margin-right: 6px;
+  margin-right: 9px;
   display: flex;
   align-items: center;
   justify-content: center;

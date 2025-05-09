@@ -51,7 +51,7 @@ function generateDummyData({
  
  export default generateDummyData;
 
- // Пример вызова:
+ // вызов (тест)
  const dummy = generateDummyData({
    start: new Date('2024-01-01'),
    end: new Date('2024-12-31'),
