@@ -1,36 +1,23 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import styles from './Report.module.css'
-import { useState } from 'react'
-import Finances from '@/lib/types'
+import { MoneyMap } from '@/lib/types'
 
-const segments = {
-  b2b: 'B2B',
-  b2c: 'B2C',
-  total: 'Итоги'
-}
-
-
-
-const TotalsReport = ({ financeMap }: { financeMap: Finances }) => {
-
-  const [chosen, setChosen] = useState<string>(segments.total)
-
-  const b2bTotal = [
-    financeMap.b2bMonthlyExpenses.reduce((acc, val) => acc + val, 0), 
-    financeMap.b2bMonthlyExpenses.reduce((acc, val) => acc + val, 0)
-  ]
-
-  const b2cTotal = [
-    financeMap.b2сMonthlyExpenses.reduce((acc, val) => acc + val, 0), 
-    financeMap.b2сMonthlyIncome.reduce((acc, val) => acc + val, 0)
-  ]
-
-  const overallTotal = [
-    b2bTotal[0] + b2cTotal[0], 
-    b2bTotal[1] + b2cTotal[1]
-  ]
+const TotalsReport = ({ 
+  financeMap, 
+  chosen,
+  segments, 
+  setChosen }: { 
+    financeMap: MoneyMap; 
+    chosen: string; 
+    segments: {
+      b2b: string;
+      b2c: string;
+      total: string;
+    };
+    setChosen: React.Dispatch<React.SetStateAction<string>>;
+  }) => {
 
   return (
     <div className={styles.wrapper}>
@@ -38,18 +25,18 @@ const TotalsReport = ({ financeMap }: { financeMap: Finances }) => {
         chosen={chosen} 
         setChosen={setChosen} 
         segment={segments.total} 
-        total={Math.max(overallTotal[0], overallTotal[1])}/>
+        total={Math.max(financeMap.combinedTotalExpenses, financeMap.combinedTotalIncome)}/>
       <TotalsReportItem 
         chosen={chosen} 
         setChosen={setChosen} 
         segment={segments.b2b}
-        total={Math.max(b2bTotal[0], b2bTotal[1])}
+        total={Math.max(financeMap.b2bTotalExpenses, financeMap.b2bTotalIncome)}
       />
       <TotalsReportItem 
         chosen={chosen} 
         setChosen={setChosen} 
         segment={segments.b2c}
-        total={Math.max(b2cTotal[0], b2cTotal[1])}
+        total={Math.max(financeMap.b2cTotalExpenses, financeMap.b2cTotalIncome)}
       />
     </div>
   )
@@ -67,11 +54,12 @@ const TotalsReportItem = ({
     chosen: string, 
     setChosen: React.Dispatch<React.SetStateAction<string>>}) => {
 
-  const [result, setResult] = useState<number>(0);
+      const [result, setResult] = useState<number>(0);
 
-  useEffect(() => {
-    setResult(Number((Math.random() * 200 - 100).toFixed(1)));
-  }, []);
+      useEffect(() => {
+        const value = Number((Math.random() * 200 - 100).toFixed(1));
+        setResult(value);
+      }, []);
 
   return (
     <div 

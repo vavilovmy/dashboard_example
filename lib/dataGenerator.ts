@@ -50,13 +50,3 @@ function generateDummyData({
  }
  
  export default generateDummyData;
-
- // вызов (тест)
- const dummy = generateDummyData({
-   start: new Date('2024-01-01'),
-   end: new Date('2024-12-31'),
-   perMonth: 15,
-   minAmount: 10000,
-   maxAmount: 250000
- });
- console.log(JSON.stringify(dummy, null, 2));
