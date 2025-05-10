@@ -4,7 +4,7 @@
 
 ```
 git clone https://github.com/vavilovmy/dashboard_example
-cd dashboard_example_h2o
+cd dashboard_example
 npm install
 npm run dev
 ```
